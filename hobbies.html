@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DCY - Hobbies</title>
+		<link rel="stylesheet" href="CSS/main.css">
+		<link href="https://fonts.googleapis.com/css2?family=Palanquin&family=Tilt+Warp&display=swap" 
+		rel="stylesheet">
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+		<script>
+			function myFunction() {
+				var x = document.getElementById("topNav");
+				if (x.className === "topNav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topNav";
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="containerHead">
+			<header class="headerDiv">
+				<div class="topBar">
+				<a href="index.html" id="logoLink"><img id="topLogo" src="Images/logo.png" alt="Limerick logo"></a>
+				<nav id="topNav" class="topNav">
+					<ul>
+						<li><a href="index.html" class="home">Home</a></li>
+						<li><a href="hobbies.html" id="currentPage">Hobbies</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="progInfo.html">Modules</a></li>
+						<li><a href="education.html">Education</a></li>
+						<li><a href="workExp.html">Work Experience</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+						<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+		</div>
+		
+		<div class="mainContainer">
+			<h1 class="titleH1">My Hobbies</h1>
+			
+			<h2 class="titleH2">Literature</h2>
+			<div class="hobbyCard card card1">
+				<h3>Reading & Writing</h3>
+				<p>
+					I quite enjoy writing in general - sometimes it is poetry and other times, more often than the former,
+					it is prose. I have been writing ever since I can remember, and I still have a few of those
+					stories lying around here and there. It is a dream of mine to get a book published, and possibly
+					have that book become well-known; I have been working towards this dream for a few years
+					now, thought it must be said with no lack of redrafts and complete scraps.
+				</p>
+				<p>
+					Naturally, I like to read. As of writing this, I am almost the whole way through the complete
+					Sherlock Holmes collection, which I have read parts of now and again but finally decided to
+					read the stories in their entirety. Reading is also one of the earliest memories of mine, and
+					I started with some girly teenage books on my sister's shelf. Since then, I've transitioned
+					more into reading classics - still, I have those first books to thank for inspiring my love
+					of reading, which in turn inspires me when I write. I suppose the title of 'favourite' will
+					have to go to <i>The Count of Monte Cristo</i> by Alexandre Dumas; it is an excellent mesh
+					of interwoven tales and backstories, with the best undertones of revenge that I have yet
+					experienced. My utmost recommendation goes without saying.
+				</p>
+			</div>
+			<img class="hobbyImage" src="Images/theCount.jpg" alt="Book Cover for the Count of Monte Cristo">
+			
+			<h2 class="titleH2">Music</h2>
+			<div class="hobbyCard card card2">
+				<h3>Listening and Playing</h3>
+				<p>
+					I listen to music practically everyday, mostly when I'm doing some kind of work or simply to
+					relax (right now I'm listening to <i>Days of Future Passed</i> by The Moody Blues). Not much
+					to be said about this one, as I think everyone understands why music is universally cherished,
+					even those peculiar ones that don't enjoy it. The main bands I listen to are anywhere from the
+					60s to the 80s, with a few modern ones too. Electric Light Orchestra first introduced me to
+					listening to full albums and hearing the different sounds of an artist/band as they progress.
+					For that reason, they'll always be my number one band, but bands like Supertramp, The Alan
+					Parson Project and The Moody Blues aren't far behind.
+				</p>
+				
+				<p>
+					The instruments I play are piano and guitar, though I've been playing piano for a lot longer -
+					somewhere around ten years or so. My mother teaches piano, so that isn't so surprising. I mostly
+					taught myself, and so the theory side of things has suffered a bit and I pick pieces up faster
+					by ear than by sight-reading. It's a great thing to be able to play an instrument - a form of
+					therapy, I find.
+				</p>
+			</div>
+			<img class="hobbyImage" src="Images/time.jpg" alt="Book Cover for the Count of Monte Cristo">
+			
+			<h2 class="titleH2">Games</h2>
+			<div class="hobbyCard card card3">
+				<h3>Board Games to Video Games</h3>
+				<p>
+					Arguably, one of my favourite ways to pass time. It's much more fun with friends, but most
+					of these can also be played alone if there's no one around. I quite enjoy playing chess and
+					learning different openings, but I also like to solve chess puzzles and see a powerful position
+					or trade unravel itself on the board.
+				</p>
+				<p>
+					As for video games, I've played a lot. Most of the time I spend playing games is with friends,
+					however a good single-player game with a compelling story and good mechanics is right up my
+					alley. One I'm playing at the moment is Dead Cells, which is a roguelite. At first glance, doing
+					the same thing over and over again in different ways may seem a quick way to get bored, but the
+					gameplay mechanics are what keep me playing it. The art style is pretty good, too.
+				</p>
+			</div>
+			<img class="hobbyImage" src="Images/deadCells.jpg" alt="Book Cover for the Count of Monte Cristo">
+		</div>
+		
+		<div class="footer">
+			<p><img src="Images/copyright.png" alt="Copyright symbol"> Daniel Christian Yermak</p>
+		</div>
+	</body>
+</html>

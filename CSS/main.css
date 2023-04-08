@@ -1,0 +1,904 @@
+/*... General CSS ...*/
+img {max-width: 100%; max-height: 100%}
+body {
+	background-image: url('../Images/brickWall.jpg');
+}
+
+/*... MOBILE VIEW ...*/
+/*... Header/TopBar CSS */
+.containerHead {
+	font-family: "Tilt Warp", Times, serif;
+	letter-spacing: 1px;
+	color: white;
+	font-weight: bold;
+}
+
+.headerDiv {
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+.topBar {
+	display: grid;
+	grid-column: 1/-1;
+	background-image: radial-gradient(#4bf2d6, #3dc4ae, #369182);
+	border: 1px solid #ce52f7;
+}
+
+.topNav ul {
+	border: 1px solid #ce52f7;
+	list-style-type: none;
+	margin: 0;
+	/*Margin*/
+	margin-right: -20px;
+	margin-top: -20px;
+	padding: 11.5px;
+	margin-bottom: -20px;
+	overflow: hidden;
+	background-color: #132237;
+	box-shadow:
+	inset 0 0 5px 3px #6f2c85,
+	inset 0 0 5px 3px #a240c2,
+	inset 0 0 7px 3px #ce52f7;
+}
+
+.topNav li {
+	float: right;
+	font-weight: bold;
+}
+
+li a {
+	display: block;
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.topNav .icon {
+	display: none;
+}
+
+#topLogo {
+	border: 1px solid #ce52f7;
+	grid-column: 1/1;
+	justify-self: left;
+	box-shadow:
+	inset 0 0 5px 3px #369182,
+	inset 0 0 5px 3px #3dc4ae,
+	inset 0 0 7px 3px #4bf2d6;
+}
+#topNav {
+	grid-column: 12/13;
+	padding: 20px;
+	margin-bottom: 0px;
+}
+
+#currentPage {
+	background-color: #f24150;
+}
+
+#topNav li a:not(#currentPage):hover {
+	background-color: #ce52f7;
+}
+
+#logoLink {
+	margin-bottom: -5px;
+}
+/*... Main Container CSS */
+
+/*.. Home page CSS */
+.mainContainer {
+	display: grid;
+	grid-template-columns:  100%;
+	column-gap: 20px;
+	font-family: "Palanquin", Times, serif;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-column: 1/1;
+	background-image: url('../Images/heroBG.jpg');
+	background-size: 100% 100%;
+}
+
+.heroText {
+	padding: 10px;
+	margin-top: -50px;
+	grid-column: 1/1;
+	grid-row: 3/4;
+	align-self: center;
+	text-align: center;
+	color: white;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.heroText h2 {
+	mix-blend-mode: difference;
+	text-transform: uppercase;
+	text-shadow:
+	.1px 0px .25px #f7903b, .2px 0px .25px #f7903b, .4px 0px .25px #f7903b,
+	
+	.1px 0px 0px #d47b33, .2px 0px 0px #d47b33, .4px 0px 0px #d47b33,
+	.1px 0px .1px #d47b33, .2px 0px .1px #d47b33, .4px 0px .1px #d47b33,
+	.1px 0px 2px #d47b33, .2px 0px 2px #d47b33, .4px 0px 2px #d47b33,
+	
+	.1px 0px 1px #b0662a, .2px 0px 1px #b0662a, .4px 0px 5px #b0662a,
+	.1px 0px 5px #b0662a, .2px 0px 20px #b0662a, .4px 0px 10px #b0662a,
+	.1px 0px 10px #b0662a, .2px 0px 30px #b0662a, .4px 0px 10px #b0662a;
+	animation: myAnim 3s infinite alternate;
+}
+
+.heroImg {
+	padding: 50px;
+	grid-column: 1/1;
+	grid-row: 2/3;
+	align-self: center;
+}
+
+.heroImg img {
+	border-radius: 50%;
+	border-top: 10px solid #FF10F0;
+	border-right: 10px solid #FF10F0;
+	border-bottom: 10px solid cyan;
+	border-left: 10px solid cyan;
+	box-shadow:
+	0 0 5px 3px black,
+	0 0 5px 3px black,
+	0 0 7px 3px black;
+}
+
+
+.card {
+	margin-top: 20px;
+	text-align: center;
+	grid-column: span 1;
+	background-color: #132237;
+	padding: 10px;
+	color: white;
+	border-top: 10px solid;
+	border-right: 10px solid;
+	border-radius: 10px;
+}
+
+.card h3, .card p {
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.card ul {
+	list-style: none;
+	margin-top: 20px;
+	padding: 0px;
+	padding-left: 30px;
+}
+
+.card ul a:hover {
+	color: #f24150;
+}
+
+.card p {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#socials img {
+	vertical-align: middle;
+}
+
+#socials {
+	text-align: left;
+}
+
+#socials li {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.card1 {
+	border-color: #4bf2d6;
+	box-shadow:
+	0 0 10px 8px #4bf2d6,
+	0 0 2.56px 3.84px #3dc4ae,
+	0 0 25.6px 2.56px #369182,
+	
+	inset 0 0 14px 12px #369182,
+	inset 0 0 5px 3px #3dc4ae,
+	inset 0 0 7px 3px #4bf2d6;
+}
+
+.card2 {
+	border-color: #ce52f7;
+	box-shadow:
+	0 0 10px 8px #ce52f7,
+	0 0 2.56px 3.84px #a240c2,
+	0 0 25.6px 2.56px #6f2c85,
+	
+	inset 0 0 14px 12px #6f2c85,
+	inset 0 0 5px 3px #a240c2,
+	inset 0 0 7px 3px #ce52f7;
+}
+
+.card3 {
+	border-color: #f24150;
+	box-shadow:
+	0 0 10px 8px #f24150,
+	0 0 2.56px 3.84px #c4333f,
+	0 0 25.6px 2.56px #91262f,
+	
+	inset 0 0 14px 12px #91262f,
+	inset 0 0 5px 3px #c4333f,
+	inset 0 0 7px 3px #f24150;
+}
+
+.link {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:22px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 36px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.link:hover {
+	padding: 11px 38px;
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+	color: #f24150;
+}
+.link:active {
+	position:relative;
+	top:1px;
+}
+
+/*.. Modules(progInfo) page CSS */
+.titleH2Center, .titleH2 {
+	display: inline;
+	grid-column: 1/1;
+	text-align: center;
+	margin-top: 30px;
+	background: rgba(0,0,0,0.5);
+	color: #f7f448;
+	letter-spacing: 5px;
+	font-weight: 100;
+	font-family: 'Tilt Neon', cursive;
+	text-shadow:
+	.1px 0px .25px #f7f448, .2px 0px .25px #f7f448, .4px 0px .25px #f7f448,
+	
+	.1px 0px 0px #cfcc3a, .2px 0px 0px #cfcc3a, .4px 0px 0px #cfcc3a,
+	.1px 0px .1px #cfcc3a, .2px 0px .1px #cfcc3a, .4px 0px .1px #cfcc3a,
+	.1px 0px 2px #cfcc3a, .2px 0px 2px #cfcc3a, .4px 0px 2px #cfcc3a,
+	
+	.1px 0px 1px #a19f2d, .2px 0px 1px #a19f2d, .4px 0px 5px #a19f2d,
+	.1px 0px 5px #a19f2d, .2px 0px 20px #a19f2d, .4px 0px 10px #a19f2d,
+	.1px 0px 10px #a19f2d, .2px 0px 30px #a19f2d, .4px 0px 10px #a19f2d;
+	box-shadow:
+	0 0 10px 8px #f7f448,
+	0 0 2.56px 3.84px #cfcc3a,
+	0 0 25.6px 2.56px #a19f2d,
+	
+	inset 0 0 5px 3px #a19f2d,
+	inset 0 0 5px 3px #cfcc3a,
+	inset 0 0 7px 3px #f7f448;
+	border-radius: 10px;
+	border: 1px solid #f7f448;
+	animation: myAnim 5s infinite alternate;
+}
+
+@keyframes myAnim {
+	40%{
+		opacity: 1;
+	}	
+	42%{
+		opacity: 0.8;
+	}	
+	43%{
+		opacity: 1;
+	}	
+	45%{
+		opacity: 0.5;
+	}	
+	46%{
+		opacity: 1;
+	}
+}
+
+.titleH1Left, .titleH1 {
+	display: inline;
+	grid-column: 1/1;
+	background: rgba(0,0,0,0.5);
+	letter-spacing: 5px;
+	color: #f7f448;
+	text-align: center;
+	text-shadow:
+	.1px 0px .25px #f7903b, .2px 0px .25px #f7903b, .4px 0px .25px #f7903b,
+	
+	.1px 0px 0px #d47b33, .2px 0px 0px #d47b33, .4px 0px 0px #d47b33,
+	.1px 0px .1px #d47b33, .2px 0px .1px #d47b33, .4px 0px .1px #d47b33,
+	.1px 0px 2px #d47b33, .2px 0px 2px #d47b33, .4px 0px 2px #d47b33,
+	
+	.1px 0px 1px #b0662a, .2px 0px 1px #b0662a, .4px 0px 5px #b0662a,
+	.1px 0px 5px #b0662a, .2px 0px 20px #b0662a, .4px 0px 10px #b0662a,
+	.1px 0px 10px #b0662a, .2px 0px 30px #b0662a, .4px 0px 10px #b0662a;
+	box-shadow:
+	0 0 0.96px 3.84px #f7903b,
+	0 0 3.84px 5.76px #d47b33,
+	0 0 38.4px 3.84px #b0662a,
+	
+	inset 0 0 14.4px 3.84px #b0662a,
+	inset 0 0 3.84px 1.92px #d47b33,
+	inset 0 0 4.8px 1.92px #f7903b;
+	border-radius: 10px;
+	animation: myAnim 6s infinite alternate;
+}
+
+.modCard h3 {
+	border-radius: 10px;
+	color: black;
+	background-color: white;
+}
+
+#card112, #card113, #card114, #card115, #card116,
+#card122, #card123, #card124, #card125, #card126 {
+	display: none;
+}
+
+.next {
+	margin-left: 5px;
+	text-align: center;
+	background-color: black;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	box-shadow:
+	0 0 0.64px 2.56px #39ff14,
+	0 0 2.56px 3.84px #39ff14,
+	0 0 25.6px 2.56px #39ff14,
+	
+	inset 0 0 9.6px 2.56px #39ff14,
+	inset 0 0 2.56px 1.28px #39ff14,
+	inset 0 0 3.2px 1.28px #39ff14;
+}
+.next:hover {
+	background-color: grey;
+}
+.next:active {
+	position:relative;
+	top:1px;
+}
+
+.previous {
+	margin-right: 5px;
+	text-align: center;
+	background-color: black;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	box-shadow:
+	0 0 0.64px 2.56px #39ff14,
+	0 0 2.56px 3.84px #39ff14,
+	0 0 25.6px 2.56px #39ff14,
+	
+	inset 0 0 9.6px 2.56px #39ff14,
+	inset 0 0 2.56px 1.28px #39ff14,
+	inset 0 0 3.2px 1.28px #39ff14;
+}
+.previous:hover {
+	background-color: grey;
+}
+.previous:active {
+	position:relative;
+	top:1px;
+}
+
+.button1 {
+	font-family: 'Tilt Neon', cursive;
+	letter-spacing: 2px;
+	justify-self: center;
+	grid-column: 1/1;
+}
+
+.TBA {
+	padding: 100px;
+	grid-column: 1/1;
+	justify-self: center;
+}
+
+.TBA h2 {
+	padding: 10px;
+}
+
+/*. Projects Page CSS .*/
+.project {
+	display: grid;
+	grid-column: 1/1;
+	grid-template-columns: 100%;
+	margin-top: 30px;
+}
+
+.projCard {
+	grid-row: 3;
+}
+
+.projCard h3 {
+	text-align: center;
+}
+
+.projCard p {
+	text-align: left;
+	padding-left: 20px;
+}
+
+.projLink {
+	grid-row: 4;
+	text-align: center;
+	align-self: center;
+	justify-self: center;
+}
+
+.projLink img {
+	margin-top: 20px;
+}
+
+#projCode1 {
+	border: 2px solid #4bf2d6;
+}
+
+#projCode2 {
+	border: 2px solid #ce52f7;
+}
+
+.githubLink {
+	font-family: 'Tilt Neon', cursive;
+	text-align: center;
+	background-color: black;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+#github1 {
+	box-shadow:
+	0 0 0.64px 2.56px #4bf2d6,
+	0 0 2.56px 3.84px #4bf2d6,
+	0 0 25.6px 2.56px #4bf2d6,
+	
+	inset 0 0 9.6px 2.56px #4bf2d6,
+	inset 0 0 2.56px 1.28px #4bf2d6,
+	inset 0 0 3.2px 1.28px #4bf2d6;
+}
+
+#github2 {
+	box-shadow:
+	0 0 0.64px 2.56px #ce52f7,
+	0 0 2.56px 3.84px #ce52f7,
+	0 0 25.6px 2.56px #ce52f7,
+	
+	inset 0 0 9.6px 2.56px #ce52f7,
+	inset 0 0 2.56px 1.28px #ce52f7,
+	inset 0 0 3.2px 1.28px #ce52f7;
+}
+
+.githubLink:hover {
+	background-color: grey;
+}
+.githubLink:active {
+	position:relative;
+	top:1px;
+}
+
+#proj2 > * {
+	display: none;
+}
+
+#projButton {
+	display: none;
+}
+
+/*. Education Page CSS .*/
+.eduCard {
+	grid-column: 1/1;
+}
+
+.titleH2Green {
+	display: inline;
+	grid-column: 1/1;
+	text-align: center;
+	margin-top: 30px;
+	background: rgba(0,0,0,0.5);
+	color: #3bf541;
+	letter-spacing: 5px;
+	font-weight: 100;
+	font-family: 'Tilt Neon', cursive;
+	text-shadow:
+	.1px 0px .25px #3bf541, .2px 0px .25px #3bf541, .4px 0px .25px #3bf541,
+	
+	.1px 0px 0px #32d937, .2px 0px 0px #32d937, .4px 0px 0px #32d937,
+	.1px 0px .1px #32d937, .2px 0px .1px #32d937, .4px 0px .1px #32d937,
+	.1px 0px 2px #32d937, .2px 0px 2px #32d937, .4px 0px 2px #32d937,
+	
+	.1px 0px 1px #24a328, .2px 0px 1px #24a328, .4px 0px 5px #24a328,
+	.1px 0px 5px #24a328, .2px 0px 20px #24a328, .4px 0px 10px #24a328,
+	.1px 0px 10px #24a328, .2px 0px 30px #24a328, .4px 0px 10px #24a328;
+	box-shadow:
+	0 0 10px 8px #3bf541,
+	0 0 2.56px 3.84px #32d937,
+	0 0 25.6px 2.56px #24a328,
+	
+	inset 0 0 5px 3px #24a328,
+	inset 0 0 5px 3px #32d937,
+	inset 0 0 7px 3px #3bf541;
+	border-radius: 10px;
+	border: 1px solid #3bf541;
+	animation: myAnim 5s infinite alternate;
+}
+
+.cardGreen {
+	border-color: #3bf541;
+	box-shadow:
+	0 0 10px 8px #3bf541,
+	0 0 2.56px 3.84px #32d937,
+	0 0 25.6px 2.56px #24a328,
+	
+	inset 0 0 14px 12px #24a328,
+	inset 0 0 5px 3px #32d937,
+	inset 0 0 7px 3px #4bf2d6;
+}
+
+.cardGreen p {
+	text-align: left;
+}
+
+/*. Work Experience CSS .*/
+.workCard {
+	text-align: left;
+}
+
+.workCard ul {
+	list-style-type: "- ";
+}
+
+.workCard p {
+	font-weight: bold;
+}
+
+.workCard a {
+	text-decoration: underline;
+	display: inline;
+	padding: 5px;
+}
+
+/*. Hobbies Page CSS .*/
+.hobbyCard p {
+	text-align: left;
+}
+
+.hobbyImage {
+	padding: 30px;
+	align-self: center;
+	justify-self: center;
+}
+
+/*. Contact Page CSS .*/
+.contactCard {
+	text-align: left;
+}
+
+.contactCard p {
+	text-align: left;
+}
+
+
+::placeholder {
+	mix-blend-mode: difference;
+}
+
+.input {
+	vertical-align: text-top;
+	border-color: #4bf2d6;
+	box-shadow:
+	0 0 10px 8px #4bf2d6,
+	0 0 2.56px 3.84px #3dc4ae,
+	0 0 25.6px 2.56px #369182,
+	
+	inset 0 0 14px 12px #369182,
+	inset 0 0 5px 3px #3dc4ae,
+	inset 0 0 7px 3px #4bf2d6;
+}
+
+textarea {
+	background-color: #4bf2d6;
+}
+
+.contactCard fieldset {
+	padding-right: 200px;
+}
+
+.contactCard label {
+	padding-bottom: 5px;
+	width: 260px;
+	display: inline-block;
+}
+
+.contactCard span {
+	padding-left: 10px;
+	color: red;
+	position: absolute;
+}
+
+#submit {
+	margin-top: 10px;
+	margin-left: 5px;
+	text-align: center;
+	background-color: black;
+	border-radius: 28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:3px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	box-shadow:
+	0 0 0.64px 2.56px #39ff14,
+	0 0 2.56px 3.84px #39ff14,
+	0 0 25.6px 2.56px #39ff14,
+	
+	inset 0 0 9.6px 2.56px #39ff14,
+	inset 0 0 2.56px 1.28px #39ff14,
+	inset 0 0 3.2px 1.28px #39ff14;
+}
+#submit:hover {
+	background-color: grey;
+}
+#submit:active {
+	position:relative;
+	top:1px;
+}
+
+#cancel {
+	float: right;
+	margin-top: 10px;
+	text-align: center;
+	background-color: black;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:0px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	box-shadow:
+	0 0 0.64px 2.56px #f24150,
+	0 0 2.56px 3.84px #f24150,
+	0 0 25.6px 2.56px #f24150,
+	
+	inset 0 0 9.6px 2.56px #f24150,
+	inset 0 0 2.56px 1.28px #f24150,
+	inset 0 0 3.2px 1.28px #f24150;
+}
+#cancel:hover {
+	background-color: grey;
+}
+#cancel:active {
+	position:relative;
+	top:1px;
+}
+
+/*. Footer CSS */
+.footer {
+	margin-top: 20px;
+	border: 2px solid white;
+	color: white;
+	background-image: radial-gradient(#4bf2d6, #3dc4ae, #369182);
+	text-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+}
+
+/*... DESKTOP VIEW ...*/
+@media screen and (min-width: 640px) {
+	/*... Main Container CSS */
+	.mainContainer {
+		grid-template-columns: repeat(12, 1fr);
+		font-family: "Palanquin", Times, serif;
+	}
+
+	.hero {
+		grid-template-columns: repeat(12, 1fr);
+		height: 600px;
+		grid-column: 1/13;
+	}
+
+	.heroText {
+		margin: auto;
+		grid-column: 4/7;
+		text-align: left;
+		grid-row: auto;
+	}
+
+	.heroImg {
+		padding: 0px;
+		padding-left: 20px;
+		grid-column: 7/10;
+		grid-row: auto;
+	}
+	
+	.card {
+		grid-column: span 4;
+	}
+	
+	/*. progInfo CSS .*/
+	.titleH2Center {
+		grid-column: 4/10;
+	}
+	
+	.titleH1Left {
+		grid-column: 1/13;
+		justify-self: left;
+		padding: 0 30px 0 30px;
+	}
+	
+	.titleH1 {
+		grid-column: 1/13;
+		justify-self: center;
+		padding: 0 30px 0 30px;
+	}	
+	
+	.titleH2 {
+		padding: 0 20px 0 20px;
+		margin-top: 30px;
+		justify-self: left;
+		grid-column: 1/13;
+	}
+	
+	#card112, #card113, #card122, #card123 {display: block;}
+	
+	.button1 {
+		justify-self: center;
+		margin-left: -20px;
+		grid-column: 4/10;
+	}
+	
+	.TBA { grid-column: 1/13;}
+	
+	/*. Project CSS .*/
+	#proj2 > * {
+		display: block;
+	}
+	
+	.project {
+		grid-column: 1/13;
+		grid-template-columns: repeat(12, 1fr);
+	}
+	
+	.projCard {
+		grid-column: span 6;
+		grid-row: auto;
+	}
+	
+	.projCard h3 {
+		text-align: left;
+		padding-left: 20px;
+	}
+	
+	.projLink {
+		grid-column: span 6;
+		grid-row: auto;
+	}
+	
+	/*. Education CSS .*/
+	.eduCard {
+		grid-column: span 3;
+	}
+	
+	.titleH2Green {
+		padding: 0 20px 0 20px;
+		justify-self: left;
+		grid-column: 1/13;
+	}
+	
+	.titleH3 {
+		justify-self: center;
+	}
+	
+	.cardGreen {
+		grid-column: 1/13;
+	}
+	
+	.cardGreen img { 	
+		float: right;
+		padding-left: 10px;
+	}
+	
+	/*. Work Experience CSS .*/
+	.workCard {
+		grid-column: 1/13;
+		justify-self: center;
+	}
+	
+	/*. Hobbies CSS .*/
+	.hobbyCard {
+		grid-column: span 6;
+	}
+	
+	.hobbyImage {
+		grid-column: span 6;
+	}
+	
+	/*. Contact CSS .*/
+	.contactCard {
+		grid-column: 1/13;
+		justify-self: center;
+	}
+}
+/* Hamburger Icon, Project Button */
+@media screen and (max-width: 640px) {
+	.topNav a {display: none;}
+	.topNav li a.icon {
+		float: right;
+		display: block;
+		margin-left: -30px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.topNav.responsive {position: relative;}
+	.topNav.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px;
+	}
+	.topNav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	
+	li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	}
+	
+	.home {
+		margin-right: 23px;
+	}
+	
+	
+	
+	#projButton {
+		display: block;
+	}
+}

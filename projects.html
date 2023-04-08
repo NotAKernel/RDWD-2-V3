@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DCY - Projects</title>
+		<link rel="stylesheet" href="CSS/main.css">
+		<link href="https://fonts.googleapis.com/css2?family=Palanquin&family=Tilt+Warp&display=swap" 
+		rel="stylesheet">
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+		<script>
+			function myFunction() {
+				var x = document.getElementById("topNav");
+				if (x.className === "topNav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topNav";
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="containerHead">
+			<header class="headerDiv">
+				<div class="topBar">
+				<a href="index.html" id="logoLink"><img id="topLogo" src="Images/logo.png" alt="Limerick logo"></a>
+				<nav id="topNav" class="topNav">
+					<ul>
+						<li><a href="index.html" class="home">Home</a></li>
+						<li><a href="hobbies.html">Hobbies</a></li>
+						<li><a href="projects.html" id="currentPage">Projects</a></li>
+						<li><a href="progInfo.html">Modules</a></li>
+						<li><a href="education.html">Education</a></li>
+						<li><a href="workExp.html">Work Experience</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+						<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+		</div>
+		
+		<div class="mainContainer">
+			<h1 class="titleH1" id="title">Notable Projects</h1>
+			
+			<div class="project" id="proj1">
+				<h2 class="titleH2Center">ItemApp</h2>
+				<div class="projCard card card1">
+					<h3>Item App</h3>
+					
+					<p>
+						This is the first Object-Oriented project which I worked on within a group. It has features 
+						such as error-checking, writing/reading data into and from a file and multiple functions which
+						can be seen in the program.
+					</p>
+					<img src="Images/projImg1.jpg" alt="menu for ItemApp">
+				</div>
+				
+				<div class="projLink">
+					<img id="projCode1" src="Images/projCode1.jpg" alt="class creation code"> <br>
+					<a href="#" class="githubLink" id="github1">Github Repository</a>
+				</div>			
+			</div>
+				
+			<div class="project" id="proj2">
+				<h2 class="titleH2Center">Array Manipulation</h2>
+				<div class="projLink">
+					<img id="projCode2" src="Images/projCode2.jpg" alt="code snippet from Array Manipulation"> <br>
+					<a href="#" class="githubLink" id="github2">Github Repository</a>
+				</div>
+				<div class="projCard card card2">
+					<h3>Array Manipulation</h3>
+					
+					<p>
+						This is a more Structured Programming focused project, in which a menu has various options that
+						allow the manipulation of an array, much like "ItemApp", it features an external file which
+						the array is saved into upon program completion, alongside error-checking user inputs.
+					</p>
+					<img src="Images/projImg2.jpg" alt="menu for Array Manipulation">
+				</div>
+			</div>
+			
+			<h4 class="button1" id="projButton">
+				<a href="#title"><strong class="previous" id="previous">Previous</strong></a>
+				<a href="#title"><strong class="next" id="next">Next</strong></a>
+			</h4>
+		</div>
+		
+		<div class="footer">
+			<p><img src="Images/copyright.png" alt="Copyright symbol"> Daniel Christian Yermak</p>
+		</div>
+		
+<script>
+document.getElementById("previous").addEventListener("click", previous);
+document.getElementById("next").addEventListener("click", next);
+let current = 1;
+let mq = window.matchMedia( "(max-width: 640px)" );
+let match = 0;
+
+// Runs when the window size is adjusted
+function screenCheck() {
+	// Checks if screen size is less than 640px
+	if (mq.matches) {
+		match = 1;
+	}
+	else {
+		if (match == 1) {
+			location.reload();
+			match = 0;
+		}
+	}
+}
+
+window.addEventListener("resize", screenCheck);
+
+function next() {
+	document.getElementById("previous").style.setProperty("visibility", "visible");
+	let nodes1 = document.getElementById("proj" + current).childNodes;
+	for (let i = 0; i < nodes1.length; i++) {
+		if (nodes1[i].nodeName.toLowerCase() == 'div' || nodes1[i].nodeName.toLowerCase() == 'h2') {
+			 nodes1[i].style.display = "none";
+		 }
+	}
+	
+	let nodes2 = document.getElementById("proj" + (current + 1)).childNodes;
+	
+	for (let i = 0; i < nodes2.length; i++) {
+		if (nodes2[i].nodeName.toLowerCase() == 'div' || nodes2[i].nodeName.toLowerCase() == 'h2') {
+			 nodes2[i].style.display = "block";
+		 }
+	}
+	
+	current++;
+	if (current == 2) {
+		document.getElementById("next").style.setProperty("visibility", "hidden");
+	}
+}
+
+function previous() {
+	document.getElementById("next").style.setProperty("visibility", "visible");
+	
+	let nodes3 = document.getElementById("proj" + current).childNodes;
+	for (let i = 0; i < nodes3.length; i++) {
+		if (nodes3[i].nodeName.toLowerCase() == 'div' || nodes3[i].nodeName.toLowerCase() == 'h2') {
+			 nodes3[i].style.display = "none";
+		 }
+	}
+	
+	let nodes4 = document.getElementById("proj" + (current - 1)).childNodes;
+	for (let i = 0; i < nodes4.length; i++) {
+		if (nodes4[i].nodeName.toLowerCase() == 'div' || nodes4[i].nodeName.toLowerCase() == 'h2') {
+			 nodes4[i].style.display = "block";
+		 }
+	}
+	
+	current--;
+	if (current == 1) {
+		document.getElementById("previous").style.setProperty("visibility", "hidden");
+	}
+}
+</script>
+
+	</body>
+</html>

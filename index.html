@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DCY - Home</title>
+		<link rel="stylesheet" href="CSS/main.css">
+		<link href="https://fonts.googleapis.com/css2?family=Palanquin&family=Tilt+Warp&display=swap" 
+		rel="stylesheet">
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+		<script>
+			function myFunction() {
+				var x = document.getElementById("topNav");
+				if (x.className === "topNav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topNav";
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="containerHead">
+			<header class="headerDiv">
+				<div class="topBar">
+				<a href="index.html" id="logoLink"><img id="topLogo" src="Images/logo.png" alt="Limerick logo"></a>
+				<nav id="topNav" class="topNav">
+					<ul>
+						<li><a href="index.html" id="currentPage" class="home">Home</a></li>
+						<li><a href="hobbies.html">Hobbies</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="progInfo.html">Modules</a></li>
+						<li><a href="education.html">Education</a></li>
+						<li><a href="workExp.html">Work Experience</a></li>
+						<li><a href="contact.html">Contact Me</a></li>
+						<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+		</div>
+		
+		<div class="mainContainer">
+			<div class="hero">
+				<div class="heroText">
+					<h2>Daniel C. Yermak</h2>
+					<p>Welcome to my portfolio website. Here, you'll be able to see all sorts
+					of information about me and my education so far. If you would like to contact me,
+					you can do so via the "Contact Me" page.</p>
+				</div>
+				<div class="heroImg">
+					<img src="Images/avatar.jpg" alt="Selfie Avatar">
+				</div>
+			</div>
+		
+			<div class="card card1">
+				<h3><a href="contact.html" class="link">Contact Me</a></h3>
+				<p>
+					Send me an email, or you can take a look at some of my socials below:
+				</p>
+				
+				<ul id="socials">
+					<li><a href="#"><img src="Images/insta2.png" alt="Instagram logo"> 
+					Danstagram_macban</a></li>
+					<li><a href="#"><img src="Images/FB.png" alt="Facebook logo"> 
+					Daniel Yermak</a></li>
+					<li><a href="#"><img src="Images/wapp.png" alt="WhatsApp logo"> 
+					Daniel Yermak</a></li>			
+				</ul>
+			</div>		
+			
+			<div class="card card2">
+				<h3><a href="projects.html" class="link">Project</a></h3>
+				<p>
+					Take a look at some of my projects that I've worked on both in and outside of
+					university.
+				</p>
+				<img src="Images/code.jpg" alt="Blurry code">
+			</div>		
+			
+			<div class="card card3">
+				<h3><a href="workExp.html" class="link">Work Experience</a></h3>
+				<p>
+					Contact information and explanations as to the work I did are available on this page.
+					Feel free to ask for references from these places.
+				</p>
+				<img src="Images/work.jpg" alt="Hands Typing Code">
+			</div>
+		</div>
+		
+		<div class="footer">
+			<p><img src="Images/copyright.png" alt="Copyright symbol"> Daniel Christian Yermak</p>
+		</div>
+	</body>
+</html>

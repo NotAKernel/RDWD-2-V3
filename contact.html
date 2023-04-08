@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DCY - Contact Me</title>
+		<link rel="stylesheet" href="CSS/main.css">
+		<link href="https://fonts.googleapis.com/css2?family=Palanquin&family=Tilt+Warp&display=swap" 
+		rel="stylesheet">
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+		<script>
+			function myFunction() {
+				var x = document.getElementById("topNav");
+				if (x.className === "topNav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topNav";
+				}
+			}
+			
+			function validateForm() {
+				
+				let clear = ["name", "comp", "web", "email1", "email2", "query"];
+				
+				for (let i = 0; i < clear.length; i++) {
+					document.getElementById(clear[i] + "Span").innerHTML = "";
+				}
+				
+				let name = document.forms["myForm"]["name"].value;
+				let comp = document.forms["myForm"]["company_name"].value;
+				let web = document.forms["myForm"]["website"].value;
+				let email1 = document.forms["myForm"]["email1"].value;
+				let email2 = document.forms["myForm"]["email2"].value;
+				let query = document.forms["myForm"]["query"].value;
+				
+				if (name == "") {
+					document.getElementById("nameSpan").innerHTML = "*Required Field!";
+					return false;
+				}
+				else if (email1 == "") {
+					document.getElementById("email1Span").innerHTML = "*Required Field!";
+					return false;
+				}
+				else if (email2 == "" ) {
+					document.getElementById("email2Span").innerHTML = "*Required Field!";
+					return false;
+				}
+				else if (query == "") {
+					document.getElementById("querySpan").innerHTML = "*Required Field!";
+					return false;
+				}
+				
+				if (email1 != email2) {
+					document.getElementById("email2Span").innerHTML = "Email must be the same!";
+					return false;
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="containerHead">
+			<header class="headerDiv">
+				<div class="topBar">
+				<a href="index.html" id="logoLink"><img id="topLogo" src="Images/logo.png" alt="Limerick logo"></a>
+				<nav id="topNav" class="topNav">
+					<ul>
+						<li><a href="index.html" class="home">Home</a></li>
+						<li><a href="hobbies.html">Hobbies</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="progInfo.html">Modules</a></li>
+						<li><a href="education.html">Education</a></li>
+						<li><a href="workExp.html">Work Experience</a></li>
+						<li><a href="contact.html" id="currentPage">Contact Me</a></li>
+						<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i></a></li>
+					</ul>
+				</nav>
+				</div>
+			</header>
+		</div>
+		
+		<div class="mainContainer">
+			<h1 class="titleH1">Contact Me</h1>
+			<div class="contactCard card card1">		
+				<form name="myForm" onsubmit="return validateForm()"
+				action="http://litstudentprojects.net/rdwd-contact-response.php" method="post">
+					
+						<fieldset id="textfields"> 
+						<legend>Contact Information</legend>
+						<p>
+							<label for="name">Name*</label>
+							<input type="text" name="name" size="25" id="name" class="input"
+							placeholder="Name*">
+							<span id="nameSpan"></span>
+						</p>	
+						
+						<p>
+							<label for="company_name">Company Name</label>
+							<input type="text" name="company_name" size="25" id="company_name" class="input"
+							placeholder="Company Name">
+							<span id="compSpan"></span>
+						</p>
+						
+						<p>
+							<label for="website">Company Website (URL)</label>
+							<input name="website" size="25" id="website" class="input"
+							placeholder="Company Website (URL)">
+							<span id="webSpan"></span>
+						</p>
+						
+						<p>
+							<label for="email1">Email*</label>
+							<input name="email1" size="25" id="email1" class="input"
+							placeholder="Email*">
+							<span id="email1Span"></span>
+						</p>
+						
+						<p>
+							<label for="email2">Retype Email*</label>
+							<input type="tel" name="email2" size="25" id="email2" class="input"
+							placeholder="Retype Email*">
+							<span id="email2Span"></span>
+						</p>				
+						
+						<p>
+							<label for="query">Query/Comment*</label>
+							<textarea name="query" cols="26" rows="5" id="query" class="input"
+							placeholder="Query/Comment*"></textarea>
+							<span id="querySpan"></span>
+						</p>
+						</fieldset>		
+
+						<fieldset>
+							<legend>CAPTCHA Verification</legend>
+						</fieldset>
+					<input type="submit" id="submit">
+					<a href="index.html" id="cancel">Cancel</a>
+				</form>
+			</div>
+		</div>
+		
+		<div class="footer" id="contactFooter">
+			<p><img src="Images/copyright.png" alt="Copyright symbol"> Daniel Christian Yermak</p>
+		</div>
+	</body>
+</html>
